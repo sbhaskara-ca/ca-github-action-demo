@@ -34,6 +34,6 @@ jobs:
         run: |
           git log $commitFrom...$commitTo  --stat --no-merges > output.txt ; cat output.txt
         env:
-          commitFrom: HEAD~1
-          commitTo: HEAD
+          commitFrom: b561dc34509e8556fa3e3da55d439baf01ca70bb
+          commitTo: 81ebef102440e31994bc092499f75bd849d66a1c
           
