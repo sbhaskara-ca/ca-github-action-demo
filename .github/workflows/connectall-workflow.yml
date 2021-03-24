@@ -7,10 +7,7 @@ jobs:
       - uses: actions/checkout@v2
         with: 
           fetch-depth: 0
-      - name: get file changes
-        run: | 
-          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
-      - name: execute perl
+      - name: post changeset to ConnectALL
         run: | 
           perl .github/scripts/push-changeset.pl
         env:
