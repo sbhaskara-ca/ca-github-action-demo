@@ -10,3 +10,9 @@ jobs:
       - name: get file changes
         run: | 
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
+      - name: execute perl
+        run: | 
+          perl .github/scripts/sample.pl
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          GITHUB_EVENT_AFTER: ${{ github.event.after }}
