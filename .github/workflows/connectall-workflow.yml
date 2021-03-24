@@ -37,4 +37,3 @@ jobs:
           commitFrom: HEAD~1
           commitTo: HEAD
           
-          echo test, and deploy your project.
