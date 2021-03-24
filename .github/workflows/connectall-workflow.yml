@@ -12,7 +12,13 @@ jobs:
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
       - name: execute perl
         run: | 
-          perl .github/scripts/sample.pl
+          perl .github/scripts/push-changeset.pl
         env:
+          CONNECTALL_APPLINK_NAME: GithubChangesets
+          CONNECTALL_PROJECT_KEY: DEMO
+          CONNECTALL_BASE_URL: ${{ secrets.CONNECTALL_URL }}
+          CONNECTALL_USER: ${{ secrets.CONNECTALL_USER }}
+          CONNECTALL_PASSWORD: ${{ secrets.CONNECTALL_PASSWORD }}
           GITHUB_EVENT_BEFORE: ${{ github.event.before }}
           GITHUB_EVENT_AFTER: ${{ github.event.after }}
+          
