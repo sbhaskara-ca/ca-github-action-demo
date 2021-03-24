@@ -11,7 +11,7 @@ jobs:
         run: | 
           perl .github/scripts/push-changeset.pl
         env:
-          CONNECTALL_APPLINK_NAME: GithubChangesets
+          CONNECTALL_APPLINK_NAME: GithubCommitLog
           CONNECTALL_PROJECT_KEY: DEMO
           CONNECTALL_BASE_URL: ${{ secrets.CONNECTALL_URL }}
           CONNECTALL_USER: ${{ secrets.CONNECTALL_USER }}
